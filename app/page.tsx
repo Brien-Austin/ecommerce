@@ -1,48 +1,19 @@
-'use client'
-import { Button } from '@/components/ui/button';
-import { useAuthState } from '@/store/auth';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { useRouter } from 'next/navigation'
-import React from 'react'
-import { useStore } from 'zustand';
+import AuthForm from "@/components/ui/auth-form";
 
-const App = () => {
-  const router = useRouter();
-  const supabase = createClientComponentClient();
-  
-  const loggedin = useStore(useAuthState,(state)=>state.isLoggedIn)
-  const onClick =async ()=>{
-    try {
-      const {data , error} = await supabase.auth.signInWithOAuth({
-        provider : 'google',
-        options : {
-          redirectTo : 'api/auth/callback'
-        }
-      })
 
-      
-    } catch (error) {
-      console.log(error)
-      
-    }
-    finally{
-
-    }
-
-  }
+export default function Home() {
   return (
-    <div>App
-      {loggedin ? ( <>
-    
-      
-      </>) : ( <>
-        <Button onClick={onClick}>
-        Continue with google
-      </Button>
-       </>)}
-    
+    <div className="row">
+      <div className="col-6">
+        <h1 className="header">Supabase Auth + Storage</h1>
+        <p>
+          Experience our Auth and Storage through a simple profile management example. Create a user
+          profile and upload an avatar image. Fast, simple, secure.
+        </p>
+      </div>
+      <div className="col-6 auth-widget">
+        <AuthForm />
+      </div>
     </div>
   )
 }
-
-export default App

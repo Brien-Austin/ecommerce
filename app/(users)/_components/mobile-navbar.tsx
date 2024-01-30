@@ -28,22 +28,19 @@ const mobileNav = [
 
 
 const MobileNavBar = () => {
-  return (
-    <div className='fixed bottom-0 left-0 w-full'>
-        <div className='px-5 py-2 w-full '>
-            <div className='bg-slate-50/80 h-14 w-full rounded-full flex px-5 gap-10 justify-center items-center'>
-                {
-                    mobileNav.map(((data,index)=>(
-                        <MobileNavItems key={index} name={data.name} icon={data.icon} link={data.link}/>
-                        
-                    )))
-                }
-
-            </div>
-            
-        </div>
-    </div>
-  )
-}
-
-export default MobileNavBar
+    return (
+      <div className='fixed bottom-0 left-0 w-full'>
+          <div className='px-5 py-2 w-full '>
+              <div className='bg-slate-50/80 z-100 opacity-100 h-14 w-full rounded-full flex px-5 gap-10 justify-center items-center'>
+                  {
+                      mobileNav.map(((data,index)=>(
+                          <MobileNavItems key={index} name={data.name} icon={data.icon} link={data.link}/>
+                      )))
+                  }
+              </div>
+          </div>
+      </div>
+    );
+  }
+  
+  export default MobileNavBar;

@@ -41,7 +41,7 @@ const Profile = () => {
 
     // Cleanup the subscription when the component unmounts
     return () => unsubscribe();
-  },[setEmail, setPhotoUrl, setUserName,setLogin]);
+  },[setEmail, setPhotoUrl, setUserName,setLogin,setLogout]);
 
   console.log(userData)
 

@@ -1,4 +1,4 @@
-
+"use client"
 import { Heart, Home, LucideIcon, ShoppingCart, User } from 'lucide-react'
 import React from 'react'
 import MobileNavItems from './mobile-nav-items'

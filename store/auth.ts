@@ -12,7 +12,7 @@ interface AuthState {
 export const useAuthState = create(
   persist<AuthState>(
     (set,get) => ({
-      isLoggedIn: false,
+      isLoggedIn: true,
       userId: '',
       setLogin : () =>{
         set((state)=>({isLoggedIn : true}))

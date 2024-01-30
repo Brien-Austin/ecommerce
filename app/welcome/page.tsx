@@ -8,7 +8,7 @@ const Welcome = () => {
 
     useEffect(()=>{
             get_user_session();
-    },[])
+    })
 
     async function get_user_session(){
         const {data , error} = await supabase.auth.refreshSession();

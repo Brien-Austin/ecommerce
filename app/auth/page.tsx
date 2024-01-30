@@ -8,7 +8,7 @@ const AuthPage = () => {
     const supabase = createClientComponentClient()
   return (
     <div>Auth Page
-        <Auth redirectTo={`${window.location.origin}/aut/callback`} supabaseClient={supabase} onlyThirdPartyProviders providers={['google']}  />
+        <Auth redirectTo={`/auth/callback`} supabaseClient={supabase} onlyThirdPartyProviders providers={['google']}  />
     </div>
   )
 }

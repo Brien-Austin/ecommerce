@@ -1,19 +1,9 @@
-import AuthForm from "@/components/ui/auth-form";
+import React from 'react'
 
-
-export default function Home() {
+const App = () => {
   return (
-    <div className="row">
-      <div className="col-6">
-        <h1 className="header">Supabase Auth + Storage</h1>
-        <p>
-          Experience our Auth and Storage through a simple profile management example. Create a user
-          profile and upload an avatar image. Fast, simple, secure.
-        </p>
-      </div>
-      <div className="col-6 auth-widget">
-        <AuthForm />
-      </div>
-    </div>
+    <div>App</div>
   )
 }
+
+export default App

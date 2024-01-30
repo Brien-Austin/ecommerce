@@ -16,7 +16,7 @@ const App = () => {
       const {data , error} = await supabase.auth.signInWithOAuth({
         provider : 'google',
         options : {
-          redirectTo : '/auth/callback'
+          redirectTo : 'api/auth/callback'
         }
       })
 

@@ -15,7 +15,7 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL('/', req.url))
   }
 
-  // Refresh session if expired - required for Server Components
+
   await supabase.auth.getSession()
 
   return res
